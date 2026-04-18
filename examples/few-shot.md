@@ -1,9 +1,14 @@
-🔹 2. Few-shot Prompting
-📖 Concept
+# 🔹 2. Few-shot Prompting
 
-Few-shot prompting uses examples to guide the model.
+## 📖 Concept
 
-🧾 Prompt
+Few-shot prompting uses **examples to guide the model**.
+
+---
+
+## 🧾 Prompt
+
+```
 Classify sentiment:
 
 Text: I hate this movie
@@ -14,7 +19,13 @@ Sentiment: Positive
 
 Text: It is okay
 Sentiment:
-💻 LLM Code
+```
+
+---
+
+## 💻 LLM Code
+
+```python
 response = client.chat.completions.create(
     model="gpt-5.3",
     messages=[
@@ -35,5 +46,14 @@ Sentiment:"""
 )
 
 print(response.choices[0].message.content)
-✅ Output
+```
+
+---
+
+## ✅ Output
+
+```
 Neutral
+```
+
+---
